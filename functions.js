@@ -40,10 +40,52 @@ class calculator {
 
 }
 
+function isLetter(char) {
+    return /^[a-zA-Z]$/.test(char);
+}
+
+
+function caesarCipher(word, shift) {
+    word = word.split('');
+    let new_word = [];
+    
+    word.forEach(letter => {
+        if (isLetter(letter))
+        {
+            let new_letter = letter.charCodeAt(0);
+            new_letter += shift;
+            if (letter === letter.toUpperCase())
+            {
+                while (new_letter > 90)
+                {
+                    new_letter -= 26;
+                }
+            }
+            else 
+            {
+                while (new_letter > 122)
+                {
+                    new_letter -= 26;
+                }
+            }
+            new_word.push(String.fromCharCode(new_letter));
+        }
+        else 
+        {
+            new_word.push(letter);
+        }
+    })
+
+    return new_word.join('');
+}
+
+caesarCipher('abc', 1);
+
 
 
 module.exports = {
     capitalize: capitalize,
     reversed: reversed,
-    calculators: calculator
+    calculators: calculator,
+    caesarCipher: caesarCipher
 };

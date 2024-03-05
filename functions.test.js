@@ -44,23 +44,23 @@ describe('calculator', () => {
 
 describe('caesar cipher', () => {
     test('shifts letters correctly', () => {
-        expect(caesarCipher('abc', 1)).toBe('bcd');
+        expect(functions.caesarCipher('abc', 1)).toBe('bcd');
     });
 
     test('wraps from z to a', () => {
-        expect(caesarCipher('xyz', 3)).toBe('abc');
+        expect(functions.caesarCipher('xyz', 3)).toBe('abc');
     });
 
     test('maintains case', () => {
-        expect(caesarCipher('AbC', 1)).toBe('BcD');
+        expect(functions.caesarCipher('AbC', 1)).toBe('BcD');
     });
 
     test('ignores non-letter characters', () => {
-        expect(caesarCipher('abc123!', 1)).toBe('bcd123!');
+        expect(functions.caesarCipher('abc123!', 1)).toBe('bcd123!');
     });
 
     test('handles negative shift values', () => {
-        expect(caesarCipher('bcd', -1)).toBe('abc');
+        expect(functions.caesarCipher('bcd', -1)).toBe('abc');
     });
 })
 
