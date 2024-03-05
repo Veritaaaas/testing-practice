@@ -16,6 +16,9 @@ describe('capitalize', () => {
 
 describe('reversed', () => {
     test('reversed', () => {
-        expect(functions.reversed("hello").toBe("olleh"));
+        expect(functions.reversed("hello")).toBe("olleh");
     });
+    test('not a string', () => {
+        expect(functions.reversed(121332)).toBe('');
+    })
 })
