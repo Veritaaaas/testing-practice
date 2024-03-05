@@ -32,5 +32,13 @@ describe('calculator', () => {
         calculator = new functions.calculators(91, 20);
         expect(calculator.subtract()).toBe(71);
     })
+    test('multiply', () => {
+        calculator = new functions.calculators(21, 3);
+        expect(calculator.multiply()).toBe(63);
+    })
+    test('divide', () => {
+        calculator = new functions.calculators(99, 3);
+        expect(calculator.divide()).toBe(33);
+    })
 })
 
