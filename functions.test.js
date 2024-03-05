@@ -28,5 +28,9 @@ describe('calculator', () => {
         calculator = new functions.calculators(1,2);
         expect(calculator.add()).toBe(3);
     })
+    test('subtract', () => {
+        calculator = new functions.calculators(91, 20);
+        expect(calculator.subtract()).toBe(71);
+    })
 })
 
