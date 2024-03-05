@@ -40,6 +40,8 @@ class calculator {
 
 }
 
+
+
 module.exports = {
     capitalize: capitalize,
     reversed: reversed,
