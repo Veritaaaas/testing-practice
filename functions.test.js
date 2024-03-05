@@ -22,3 +22,11 @@ describe('reversed', () => {
         expect(functions.reversed(121332)).toBe('');
     })
 })
+
+describe('calculator', () => {
+    test('add', () => {
+        calculator = new functions.calculators(1,2);
+        expect(calculator.add()).toBe(3);
+    })
+})
+
