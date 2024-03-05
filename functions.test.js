@@ -1,13 +1,21 @@
-const capitalize = require('./functions');
+const functions = require('./functions');
 
-test('capitalize', () => {
-    expect(capitalize("hello")).toBe("Hello");
+describe('capitalize', () => {
+    test('capitalize', () => {
+        expect(functions.capitalize("hello")).toBe("Hello");
+    });
+
+    test('capitalize and turns remaining to lowercase', () => {
+        expect(functions.capitalize("HELLO")).toBe("Hello");
+    });
+
+    test('not a string', () => {
+        expect(functions.capitalize(1232)).toBe('');
+    });
 });
 
-test('capitalize and turns remaining to lowercase', () => {
-    expect(capitalize("HELLO")).toBe("Hello");
-});
-
-test('not a string', () => {
-    expect(capitalize(1232)).toBe('');
-});
+describe('reversed', () => {
+    test('reversed', () => {
+        expect(functions.reversed("hello").toBe("olleh"));
+    });
+})
