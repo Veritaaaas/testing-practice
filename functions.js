@@ -79,8 +79,6 @@ function caesarCipher(word, shift) {
     return new_word.join('');
 }
 
-caesarCipher('abc', 1);
-
 
 
 module.exports = {
