@@ -79,11 +79,32 @@ function caesarCipher(word, shift) {
     return new_word.join('');
 }
 
+function analyzeArray(array) {
+    array = array.sort();
+    let average = 0;
+
+    array.forEach(element => {
+        average += element;
+    })
+
+    average = average / array.length;
+
+    return object = {
+        average: average,
+        min: array[0],
+        max: array[array.length - 1],
+        length: array.length
+    };
+
+    
+}
+
 
 
 module.exports = {
     capitalize: capitalize,
     reversed: reversed,
     calculators: calculator,
-    caesarCipher: caesarCipher
+    caesarCipher: caesarCipher,
+    analyzeArray: analyzeArray
 };

@@ -72,6 +72,8 @@ describe("analyze array", () => {
         max: 8,
         length: 6
       };
-    test(functions.analyzeArray(array)).toBe(object);
+    test('analyzeArrray', () => {
+        expect(functions.analyzeArray(array)).toEqual(object);
+    });
 })
 
